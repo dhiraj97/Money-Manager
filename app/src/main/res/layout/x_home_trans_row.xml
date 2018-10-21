@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8sp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/x_home_trans_row_cat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4sp"
+            android:layout_weight="1"
+            android:text="Transaction Category"
+            android:textSize="20sp"/>
+
+
+        <TextView
+            android:id="@+id/x_home_trans_row_amt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rs 1243"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/x_home_trans_row_acc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(account)"
+        android:textColor="@color/colorBlue"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/x_home_trans_row_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="4sp"
+        android:text="info"
+        android:textColor="@color/colorPrimaryMedium"
+        android:textSize="12sp"/>
+
+
+</LinearLayout>
+

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/a_budgets"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.moneymanager.activities.budget.ABudgets">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/a_budget_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/transparent"/>
+
+        <TextView
+            android:id="@+id/a_budget_no_budget_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="12dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="No Budgets set"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp"
+            android:textStyle="normal|italic"
+            android:visibility="gone"/>
+
+        <ListView
+            android:id="@+id/a_budget_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:divider="@color/transparent"
+            android:dividerHeight="14sp"
+            android:paddingBottom="100dp"
+            android:paddingLeft="14sp"
+            android:paddingRight="14sp">
+
+        </ListView>
+
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_add_budget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_margin="24dp"
+        android:src="@drawable/ic_add_black_48dp"
+        app:backgroundTint="@color/colorAccent"
+        app:elevation="16dp"
+        app:fabSize="normal"
+        />
+
+</android.support.design.widget.CoordinatorLayout>

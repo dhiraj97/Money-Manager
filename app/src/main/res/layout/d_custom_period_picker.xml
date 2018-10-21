@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:padding="8sp">
+
+    <TextView
+        android:id="@+id/d_custom_period_from_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="From"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/d_custom_period_starting_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10sp"
+        android:background="@color/cardview_shadow_start_color"
+        android:onClick="onStartDatePick"
+        android:padding="8sp"
+        android:text="set date"
+        android:textSize="32sp"/>
+
+    <TextView
+        android:id="@+id/d_custom_period_to_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/d_custom_period_ending_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_shadow_start_color"
+        android:onClick="onEndDatePick"
+        android:padding="8sp"
+        android:text="set date"
+        android:textSize="32sp"/>
+
+</LinearLayout>

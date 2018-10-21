@@ -1,0 +1,104 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/colorBlack"
+             tools:context="com.moneymanager.fragments.FAddTransaction">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:padding="10sp">
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp">
+
+                <EditText
+                    android:id="@+id/add_trans_amt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="amount"
+                    android:inputType="numberDecimal"
+                    android:textSize="28sp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <ToggleButton
+                android:id="@+id/add_trans_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp"
+                android:background="@drawable/income_expense_toggle"
+                android:checked="true"
+                android:text="ToggleButton"
+                android:textOff="income"
+                android:textOn="expense"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/add_trans_cat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp"
+                android:background="@color/colorPrimarySuperDark"
+                android:padding="12sp"
+                android:text="Select Category"
+                android:textSize="22sp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/add_trans_acc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp"
+                android:background="@color/colorPrimarySuperDark"
+                android:padding="12sp"
+                android:text="Select Account"
+                android:textSize="22sp"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp">
+
+                <EditText
+                    android:id="@+id/add_trans_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="info"
+                    android:inputType="text"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/add_trans_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp"
+                android:background="@color/colorPrimarySuperDark"
+                android:onClick="OnSetDateClick"
+                android:padding="12sp"
+                android:text="set date"
+                android:textSize="22sp"/>
+
+            <Switch
+                android:id="@+id/add_trans_ex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Exclude from Overview and Reports"
+                android:visibility="gone"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</FrameLayout>

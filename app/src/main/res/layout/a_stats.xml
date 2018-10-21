@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/a_stats"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.moneymanager.activities.stats.AStats">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/a_stats_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/transparent">
+
+        <LinearLayout
+            android:id="@+id/a_stats_toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8sp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/a_stats_toolbar_account_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="Some Account"
+                    android:textSize="20sp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="4dp"
+                    android:scaleX=".7"
+                    android:scaleY=".7"
+                    app:srcCompat="@android:drawable/arrow_down_float"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="8sp"
+        android:paddingRight="8sp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/a_stats_overview_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimaryDark"
+                        android:orientation="vertical"
+                        android:padding="8sp">
+
+                        <TextView
+                            android:id="@+id/a_stats_overview_card_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Today's Overview"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="12sp"
+                            android:textStyle="italic"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/a_stats_overview_card_income_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Income"
+                                android:textSize="18dp"/>
+
+                            <TextView
+                                android:id="@+id/a_stats_overview_card_income_amt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Rs 0.0"
+                                android:textColor="@color/colorGreen"
+                                android:textSize="18dp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="8sp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/a_stats_overview_card_expense_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Expense"
+                                android:textSize="18dp"/>
+
+                            <TextView
+                                android:id="@+id/a_stats_overview_card_expense_amt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Rs 0.0"
+                                android:textColor="@color/colorRed"
+                                android:textSize="18dp"/>
+
+                        </LinearLayout>
+
+                        <include layout="@layout/x_line"></include>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="4sp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/a_stats_overview_card_total_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Balance"
+                                android:textSize="22dp"/>
+
+                            <TextView
+                                android:id="@+id/a_stats_overview_card_total_amt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Rs 0.0"
+                                android:textSize="22dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/a_stats_overview_piechart"
+                    android:layout_width="match_parent"
+                    android:layout_height="200sp"
+                    android:layout_marginBottom="10sp"
+                    android:orientation="vertical"
+                    android:padding="8sp">
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/a_stats_piechart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone">
+
+                    </com.github.mikephil.charting.charts.PieChart>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/a_stats_overview_bargraph"
+                    android:layout_width="match_parent"
+                    android:layout_height="250sp"
+                    android:layout_marginBottom="10sp"
+                    android:orientation="vertical"
+                    android:padding="2sp">
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/a_stats_week_barchart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone">
+
+                    </com.github.mikephil.charting.charts.BarChart>
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/a_stats_month_barchart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone">
+
+                    </com.github.mikephil.charting.charts.BarChart>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/a_stats_overview_linegraph"
+                    android:layout_width="match_parent"
+                    android:layout_height="250sp"
+                    android:layout_marginBottom="10sp"
+                    android:orientation="vertical"
+                    android:padding="2sp">
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/a_stats_year_linechart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone">
+
+                    </com.github.mikephil.charting.charts.LineChart>
+
+                </LinearLayout>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/a_stats_income_trans_list_container_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
+                    app:cardCornerRadius="4dp">
+
+                    <LinearLayout
+                        android:id="@+id/a_stats_income_trans_list_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorFaintGreen"
+                        android:orientation="vertical">
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/a_stats_expense_trans_list_container_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
+                    app:cardCornerRadius="4dp">
+
+                    <LinearLayout
+                        android:id="@+id/a_stats_expense_trans_list_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorFaintRed"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+</LinearLayout>

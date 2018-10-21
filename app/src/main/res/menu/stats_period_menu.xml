@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/stats_menu_period_text"
+        android:title="Day"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/stats_menu_period_day"
+        android:title="Day"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/stats_menu_period_week"
+        android:title="Week"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/stats_menu_period_month"
+        android:title="Month"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/stats_menu_period_year"
+        android:title="Year"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/stats_menu_period_custom"
+        android:title="Custom"
+        app:showAsAction="never"/>
+</menu>

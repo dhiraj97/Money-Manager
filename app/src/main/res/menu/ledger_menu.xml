@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/ledger_menu_text"
+        android:title="All"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/ledger_menu_all"
+        android:title="All"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/ledger_menu_trans"
+        android:title="Transactions"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/ledger_menu_debts"
+        android:title="Debts + Loans"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/ledger_menu_transfers"
+        android:title="Transfers"
+        app:showAsAction="never"/>
+
+
+</menu>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/a_account_transfer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.moneymanager.activities.accounts.AAccountTransfer">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/a_acc_transfer_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="From"/>
+
+        <TextView
+            android:id="@+id/a_transfer_acc_from"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            android:background="@color/colorPrimarySuperDark"
+            android:padding="12sp"
+            android:text="Select Account"
+            android:textSize="22sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="To"/>
+
+        <TextView
+            android:id="@+id/a_transfer_acc_to"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            android:background="@color/colorPrimarySuperDark"
+            android:padding="12sp"
+            android:text="Select Account"
+            android:textSize="22sp"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp">
+
+            <EditText
+                android:id="@+id/d_transfer_amt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="amount"
+                android:inputType="numberDecimal"
+                android:textSize="28sp"/>
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+</LinearLayout>

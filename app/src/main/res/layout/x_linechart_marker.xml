@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/x_linechart_marker_layout"
+              android:layout_width="400dp"
+              android:layout_height="match_parent"
+              android:background="@color/colorPrimaryDark"
+              android:orientation="vertical"
+              android:padding="4dp">
+
+    <TextView
+        android:id="@+id/x_linechart_marker_month"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ds"
+        android:textColor="@android:color/white"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:id="@+id/x_linechart_marker_income"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorGreen"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:id="@+id/x_linechart_marker_expense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorRed"
+        android:textSize="12dp"/>
+
+</LinearLayout>

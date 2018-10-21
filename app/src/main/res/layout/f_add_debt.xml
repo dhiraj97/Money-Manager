@@ -1,0 +1,102 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/colorBlack"
+             tools:context="com.moneymanager.fragments.FAddDebt">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:padding="10sp">
+
+            <TextView
+                android:id="@+id/add_debt_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp"
+                android:background="@color/colorPrimarySuperDark"
+                android:padding="12sp"
+                android:text="Select Type"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:id="@+id/add_debt_acc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp"
+                android:background="@color/colorPrimarySuperDark"
+                android:enabled="true"
+                android:padding="12sp"
+                android:text="Select Account"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:id="@+id/add_debt_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp"
+                android:background="@color/colorPrimarySuperDark"
+                android:enabled="false"
+                android:padding="12sp"
+                android:text="Select User"
+                android:textSize="22sp"
+                />
+
+            <TextView
+                android:id="@+id/add_debt_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp"
+                android:background="@color/colorPrimarySuperDark"
+                android:enabled="false"
+                android:onClick="OnSetDateClick"
+                android:padding="12sp"
+                android:text="set date"
+                android:textSize="22sp"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/f_add_debt_amt_textinput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp">
+
+                <EditText
+                    android:id="@+id/add_debt_amt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:hint="amount"
+                    android:inputType="numberDecimal"
+                    android:textSize="28sp">
+
+                </EditText>
+
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/add_debt_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:hint="info"
+                    android:inputType="textAutoComplete"/>
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

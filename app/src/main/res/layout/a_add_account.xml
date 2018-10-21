@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/a_add_account"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:myContext="com.moneymanager.activities.accounts.AAddAccount">
+
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/add_account_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/transparent"
+    />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="14sp"
+        android:paddingRight="14sp"
+        android:paddingTop="8dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/new_account_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4sp"
+            android:hint="Name"
+            android:inputType="textPersonName"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/new_account_bal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6sp"
+            android:hint="Starting Balance"
+            android:inputType="numberDecimal"/>
+        </android.support.design.widget.TextInputLayout>
+        <Switch
+            android:id="@+id/new_account_exclude"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="12sp"
+            android:text="Exclude from reports and stats"
+            android:textSize="16sp"
+            android:visibility="gone"
+        />
+        <Button
+            android:id="@+id/insert_new_account_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:onClick="onInsertAccountClick"
+            android:text="add new account"
+            android:textColor="@color/colorPrimarySuperDark"
+        />
+    </LinearLayout>
+
+
+</LinearLayout>
